@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "installCommand": "npm i -g npm@9 && npm --prefix client install --include=dev --no-audit --no-fund && npm --prefix server install --include=dev --no-audit --no-fund",
+  "installCommand": "npm i -g npm@9 && npm --prefix client install --include=dev --no-audit --no-fund --registry=https://registry.npmjs.org/ && npm --prefix server install --include=dev --no-audit --no-fund --registry=https://registry.npmjs.org/",
   "buildCommand": "npm --prefix client run build",
   "outputDirectory": "client/dist",
   "rewrites": [
