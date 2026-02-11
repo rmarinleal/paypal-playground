@@ -32,7 +32,13 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(clientDistPath, "index.html"));
 });
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+const isVercel = process.env.VERCEL === "1";
+
+if (!isVercel) {
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+}
+
+export default app;
 
