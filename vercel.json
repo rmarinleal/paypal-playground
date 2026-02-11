@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "installCommand": "npm --prefix client install && npm --prefix server install",
+  "buildCommand": "npm --prefix client run build",
   "builds": [
     {
       "src": "client/package.json",
