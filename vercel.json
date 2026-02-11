@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "installCommand": "corepack enable && pnpm --dir client install --frozen-lockfile=false && pnpm --dir server install --frozen-lockfile=false",
-  "buildCommand": "corepack enable && pnpm --dir client run build",
+  "installCommand": "npm --prefix client install --include=dev --no-audit --no-fund && npm --prefix server install --include=dev --no-audit --no-fund",
+  "buildCommand": "npm --prefix client run build",
   "outputDirectory": "client/dist",
   "rewrites": [
     {
