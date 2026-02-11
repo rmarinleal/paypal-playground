@@ -3,12 +3,11 @@
   "installCommand": "npm --prefix client ci --no-audit --no-fund && npm --prefix server ci --no-audit --no-fund",
   "buildCommand": "npm --prefix client run build",
   "outputDirectory": "client/dist",
-  "functions": {
-    "api/**/*.mjs": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
